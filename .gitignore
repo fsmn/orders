@@ -1,0 +1,14 @@
+/uploads
+.settings
+/application/logs
+/application/cache
+*.sql
+/application/config/email.php
+email.php
+*email.php
+*/email.php
+/application/config/database.php
+*/.DS_Store
+.DS_Store
+system
+user_guide

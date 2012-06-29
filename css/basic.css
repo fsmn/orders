@@ -1,0 +1,349 @@
+body {
+	font-family: sans-serif, Tahoma;
+	font-size: 12px;
+	padding-left: 1em;
+	padding-top: 1em;
+	padding-right: 1em;
+}
+
+#page {
+	margin-left: auto;
+	margin-right: auto;
+	width: 9in;
+}
+
+h1,h2,h3,h4,h5 {
+	padding: 5px;
+}
+
+a {
+	text-decoration: underline;
+	cursor: pointer
+}
+
+a:link {
+	
+}
+
+a:visited {
+	
+}
+
+a:hover {
+	
+}
+
+a:active {
+	
+}
+
+a.button{
+	text-decoration: none;
+}
+
+input[type=submit],.button {
+	cursor: pointer;
+	border-radius: 3px;
+	text-align: center;
+	position: static;
+	border-style: solid;
+	border-width: 1px;
+	cursor: pointer;
+	padding: 5px;
+}
+
+table td .button {
+	padding: 2px 5px;
+}
+
+.delete {
+	float: right;
+}
+
+div.button {
+	display: inline;
+}
+
+div.delete {
+	display: inline;
+}
+
+#order_buttons div.delete {
+	margin-top: -5px;
+}
+
+#vendor_view {
+	min-height: 122px;
+}
+
+table.order {
+	width: 100%;
+}
+
+table.order_list td,tbody td {
+	padding: 0.05in;
+	font-size: 12px
+}
+
+td {
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 1px;
+	margin: 0px;
+	padding: 0px;
+}
+
+thead td {
+	background-color: silver;
+}
+
+tfoot {
+	border-top: 3px solid black;
+}
+
+#headerRow {
+	border-bottom: solid 1px
+}
+
+#addressRow {
+	width: 100%;
+}
+
+.thickBorder {
+	border-style: solid;
+	border-weight: 4px;
+	border-color: #000;
+	margin-top: 10px;
+	background-color: #000;
+}
+
+#detailsRow {
+	border-bottom: solid 4px
+}
+
+.itemsRow {
+	
+}
+
+#logoBox {
+	float: left;
+}
+
+#poBox {
+	float: right;
+	font-size: 22px;
+	font-family: "Courier";
+}
+
+#poLabel {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+#fsmBox {
+	width: auto;
+	margin-left: 150px;
+	margin-right: 150px;
+}
+
+#addressRow .leftBox,#addressRow .rightBox {
+	height: 2in;
+}
+
+.leftBox {
+	width: 45%;
+	float: left;
+	*padding-left: .125in
+}
+
+.rightBox {
+	margin-left: 45%;
+	width: auto;
+	padding-left: .25in;
+}
+
+.leftBox fieldset,.rightBox fieldset {
+	height: 90%;
+}
+
+legend {
+	font-size: 13px;
+}
+
+td.vendors {
+	padding: 5px;
+}
+
+#header {
+	
+}
+
+#navigation {
+	top: 0;
+	width: 95%;
+	padding: .5em 1em 0 1em;
+	height: 2em;
+	*border-width: 1px;
+	*border-style: solid;
+	margin-bottom: 2em;
+	height: 35px;
+	display: block;
+}
+
+#navigation ul {
+	padding: 0;
+	margin: 0;
+	display: block;
+	margin-top: 8px;
+}
+
+#navigation li {
+	display: inline;
+	padding-left: 0.5em;
+	margin-left: 0.5em;
+	margin-top: 0.5em;
+	color: black;
+}
+#navigation ul li.site-name {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-top:0;
+}
+#navigation li:first-child {
+	padding-left: 0;
+	margin-left: 0
+}
+
+#navigation li a {
+	color: blue
+}
+
+#content {
+	min-width: 7.5in;
+	max-width: 8in;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#body {
+	padding: 1.25em
+}
+
+#insertDate {
+	background-color: yellow;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+fieldset#vendorEdit { /*width: 75%*/
+	
+}
+
+label { /*position: absolute;
+	text-align: right;
+	width: 130px;
+	*/
+	
+}
+
+input,textarea,select { /*margin-left: 140px;*/
+	
+}
+
+fieldset.vendor-list {
+	margin-top: 1em;
+	width: 25%;
+	min-width: 200px;
+	border-width: 1px;
+}
+
+fieldset.vendor-list legend,span.vendor_view {
+	padding-top: .25em;
+	padding-bottom: .25em;
+	padding-left: 1em;
+	padding-right: 1em;
+	font-weight: bold;
+}
+
+.pagination {
+	padding-bottom: 1em;
+}
+
+.pagination a,.pagination strong {
+	padding: 4px 7px;
+	text-decoration: none;
+	font-size: 13px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.pagination strong,.pagination a:hover {
+	font-weight: normal;
+}
+
+h3 {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-right: .5em;
+	padding-left: .5em;
+}
+
+td.clear {
+	border-width: 0px;
+	background-color: transparent;
+}
+
+legend {
+	font-weight: bold;
+}
+
+#schoolAddress {
+	margin-left: 15px;
+}
+
+#taxExempt {
+	margin-top: 25px;
+	text-align: center;
+	font-size: 16px;
+}
+
+#schoolName {
+	font-size: 15px;
+	font-weight: bold
+}
+
+.totals {
+	text-align: right;
+	font-weight: bold;
+}
+
+td.poLine {
+	font-size: 15px;
+}
+
+#vendorView {
+	display: inline;
+}
+
+#search_string {
+	width: 99%;
+}
+
+.button-row {
+	padding: 3px;
+	margin-bottom: 7px;
+	margin-top: 7px;
+}
+
+#formRow {
+	
+}
+
+
+#item-table {
+	padding-top: 10px;
+}
+
+.button-box {
+	padding: 15px 5px;

@@ -1,0 +1,33 @@
+.pageBox,.order {
+	width: auto;
+}
+
+#navigation {
+	position: absolute;
+	top: 0;
+	width: 95%;
+	background-color: #ffd;
+	padding: .5em 1em 0 1em;
+	height: 2em;
+	border-top: 5px solid blue;
+	min-width: 100px;
+}
+
+.leftBox {
+	width: auto;
+	float: left;
+	padding-left: 0px;
+	font-size: 12px;
+}
+
+.rightBox {
+	margin-left: 0%;
+	width: auto;
+	padding-left: 0;
+}
+
+label {
+	position: absolute;
+	text-align: right;
+	width: auto;
+}
