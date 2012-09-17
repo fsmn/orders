@@ -31,7 +31,7 @@ function showPopup(myTitle,data,popupWidth,x,y){
 	});
 	
 	if(x) {
-		myDialog.dialog({position:x})
+		myDialog.dialog({position:x});
 	}
 
 
