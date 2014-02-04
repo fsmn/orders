@@ -1,11 +1,15 @@
 body {
 	font-family: "Times New Roman", serif;
 	font-size: 15px;
-	margin: .25in;
+	*margin: .5in;
+	width: 8.5in;
+	height: 11in;
 	padding:0;
+	margin: 0;
 }
+
 #page {
-	width: 8in;
+	padding: .5in;
 }
 
 div.line {
@@ -28,8 +32,7 @@ div.line {
 	border-top: 0;
 }
 
-#poBox {
-	/*float: right;
+#poBox { /*float: right;
 	font-size: 22px;
 	font-family: Courier;*/
 	color: black;
@@ -41,10 +44,9 @@ div.line {
 }
 
 #content {
-    min-width: 7.5in;
-
+	min-width: 7.5in;
 }
 
-.leftBox, .rightBox {
+.leftBox,.rightBox {
 	height: none;
 }
