@@ -35,7 +35,7 @@ if( $_SERVER['SERVER_NAME'] == "test.server.fsmn" ){
  | variable so that it is blank.
  |
  */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
  |--------------------------------------------------------------------------

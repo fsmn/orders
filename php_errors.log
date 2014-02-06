@@ -3,3 +3,5 @@
 [07-Oct-2011 09:24:11] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /Users/administrator/Dropbox/orders/application/views/item_table.php on line 12
 [07-Oct-2011 09:24:12] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /Users/administrator/Dropbox/orders/application/views/item_table.php on line 12
 [15-Nov-2011 10:44:25] PHP Fatal error:  Call to a member function get_all() on a non-object in /Users/administrator/Dropbox/orders/application/controllers/order.php on line 34
+[06-Feb-2014 11:31:49 America/Chicago] PHP Warning:  require_once(/Users/administrator/Dropbox/ci_core/system/core/CodeIgniter.php): failed to open stream: No such file or directory in /Users/administrator/Dropbox/orders/index.php on line 202
+[06-Feb-2014 11:31:49 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/Users/administrator/Dropbox/ci_core/system/core/CodeIgniter.php' (include_path='.:/usr/local/PEAR') in /Users/administrator/Dropbox/orders/index.php on line 202
