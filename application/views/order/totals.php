@@ -14,7 +14,7 @@ foreach($orders as $order){
 			$orderLines[] = "<tr><td colspan='7' class='totals'>Order Total: " . getAsCash($poTotal). "</td></tr>";
 
 		}
-		$line = sprintf("<tr><td colspan='7' class='poLine'><a href='%s'>%s</a>",site_url("order/view/$order->kPO"),$order->kPo);
+		$line = sprintf("<tr><td colspan='7' class='poLine'><a href='%s'>%s</a></td></tr>",site_url("order/view/$order->kPO"),$order->kPo);
 		$orderLines[] = $line;
 		$lastPO = $order->kPO;
 		$notFirst = true;
