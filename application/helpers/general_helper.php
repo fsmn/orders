@@ -53,7 +53,7 @@ function getKeyedPair($list,$pairs, $options = array()){
  * @params $format string
  * @abstract this shouldn't be in this file, but I didn't want to create a new file with general formatting tools yet.
  */
-function formatDate($date,$format){
+function formatDate($date,$format = "standard"){
 	//$format=mysql//yyyy-mm-dd
 	//$format=standard//mm-dd-yyyy
 	$date=str_replace("/","-",$date);

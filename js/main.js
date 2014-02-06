@@ -3,6 +3,7 @@ $(document).ready(function(){
 		history.back(2);
 	});
 	
+
 	$("#printPage").live('click',function(event){
 		printPage();
 		event.preventDefault();

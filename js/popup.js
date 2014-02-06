@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-$("#kPO").live('blur', function(event) {
+	$("#kPO").live('blur', function(event) {
 		var myPO = this.value;
 		var myUrl = baseUrl + "order/has_match/" + myPO;
 		var myTarget = "validPO";

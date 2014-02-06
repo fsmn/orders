@@ -18,9 +18,9 @@
 	value="<?=getValue($order, 'kPO'); ?>"/> <span id="validPO"></span></p>
 
 <?php endif;?>
-<p><label for="poDate">Order Date</label> <input type="text" class="datefield"
+<p><label for="poDate">Order Date</label> <input type="text" 
 	name="poDate" id="poDate" style="width: auto;"
-	value="<?=formatDate(getValue($order, 'poDate'),"standard");?>"/> <a id="insertDate">&lt;-Today</a></p>
+	value="<?=formatDate(getValue($order, 'poDate',date("Y-m-d")));?>" class="datefield" /></p>
 <p><label for="poOrderMethod">Order Method: </label><span
 	id="orderMethodView"> <?php 
 	echo form_dropdown('poOrderMethod', $methodPairs, getValue($order, 'poOrderMethod'), 'id="poOrderMethod"');

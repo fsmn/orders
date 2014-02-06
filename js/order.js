@@ -68,6 +68,8 @@ $(document).ready(function(){
 					data: formData,
 					success: function(data) {
 					showPopup('Add Order', data, 'auto');
+					$(".datefield").datepicker();
+
 					}
 				});
 		}// end function(event)
@@ -87,6 +89,8 @@ $(document).ready(function(){
 					data: formData,
 					success: function(data) {
 					showPopup('Edit Order', data, 'auto');
+					$(".datefield").datepicker();
+
 					}
 				});
 				
