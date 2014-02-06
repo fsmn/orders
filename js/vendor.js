@@ -3,7 +3,7 @@ $(".new_vendor").live('click',
 			var formData = {
 				ajax: 1,
 				action: "add"
-			}
+			};
 			var myUrl = baseUrl + "vendor/add/";
 			$.ajax({
 				url: myUrl,
@@ -12,7 +12,7 @@ $(".new_vendor").live('click',
 				success: function(data) {
 				showPopup("New Vendor", data, 'auto');
 			}
-			})
+			});
 		}// end function(event)
 	);// end newVendor.click
 	

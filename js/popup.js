@@ -1,3 +1,4 @@
+$(document).ready(function(){
 
 $("#kPO").live('blur', function(event) {
 		var myPO = this.value;
@@ -39,8 +40,8 @@ $("#kPO").live('blur', function(event) {
 		var month = theDate.getMonth() + 1;
 		var day = theDate.getDate();
 		day = ((day < 10) ? "0" : "") + day;
-		var dateString = year + "-" + month + "-" + day;
+		var dateString = month + "-" + day + "-" + year;
 		$('#poDate').val(dateString);
 	});// end insertDate.click
 		
-	
+});

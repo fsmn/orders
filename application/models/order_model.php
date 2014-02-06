@@ -30,7 +30,7 @@ class Order_model extends CI_Model{
 		};
 
 		if($this->input->post('poDate')){
-			$this->poDate = $this->input->post('poDate');
+			$this->poDate = formatDate($this->input->post('poDate'),"mysql");
 		}
 
 		if($this->input->post('poOrderMethod')){
