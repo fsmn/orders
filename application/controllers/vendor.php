@@ -1,7 +1,7 @@
 <?php
 
 
-class Vendor extends CI_Controller
+class Vendor extends MY_Controller
 {
 	function __construct()
 	{
@@ -33,7 +33,7 @@ class Vendor extends CI_Controller
 		$data["vendors"] = $this->vendor_model->fetch_vendors($limits);
 
 		$data["target"] = "vendor/list";
-		$this->load->view("template", $data);
+		$this->load->view("page/index", $data);
 
 	}
 
@@ -50,7 +50,7 @@ class Vendor extends CI_Controller
 			$data["title"] = "Purchase Order System: Edit Vendor";
 			$data["print"] = false;
 			$data["target"] = "vendor_edit";
-			$this->load->view("template", $data);
+			$this->load->view("page/index", $data);
 		}
 			
 	}
@@ -81,7 +81,7 @@ class Vendor extends CI_Controller
 		$data["print"] = false;
 		$data["target"] = "vendor/view";
 		$data["vendor"] = $this->vendor_model->fetch_vendor($kVendor);
-		$this->load->view("template", $data);
+		$this->load->view("page/index", $data);
 	}
 
 	function add()
@@ -96,7 +96,7 @@ class Vendor extends CI_Controller
 				$this->load->view("vendor/edit", $data);
 			}else{
 				$data["print"] = false;
-				$this->load->view("template", $data);
+				$this->load->view("page/index", $data);
 			}
 		}
 	}

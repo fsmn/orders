@@ -1,5 +1,5 @@
 body {
-	font-family: sans-serif, Tahoma;
+	font-family: Tahoma, sans-serif;
 	font-size: 12px;
 	padding-left: 1em;
 	padding-top: 1em;
@@ -37,7 +37,7 @@ a:active {
 	
 }
 
-a.button{
+a.button {
 	text-decoration: none;
 }
 
@@ -204,18 +204,22 @@ td.vendors {
 	margin-top: 0.5em;
 	color: black;
 }
+
 #navigation ul li.site-name {
 	font-weight: bold;
 	font-size: 1.2em;
-	margin-top:0;
+	margin-top: 0;
 }
+
 #navigation li:first-child {
 	padding-left: 0;
 	margin-left: 0
 }
 
-#navigation li a {
-	color: blue
+#user-name {
+	position: fixed;
+	right: 25px;
+	top: 25px;
 }
 
 #content {
@@ -340,10 +344,75 @@ td.poLine {
 	
 }
 
-
 #item-table {
 	padding-top: 10px;
 }
 
+
 .button-box {
-	padding: 15px 5px;
+	margin: 1em 0;
+	height: 15px;
+}
+
+.button-box ul {
+	margin: 0;
+	padding: 0;
+}
+
+.button-box ul li {
+	display: inline;
+}
+
+.login {
+	position: relative;
+	top: 3em;
+	padding: 2em 5em;
+	text-align: left;
+	width: 30em;
+	margin: auto;
+	display: block;
+	border-radius: 5px;
+	box-shadow: 4px 4px 11px black;
+}
+
+.login h2 {
+	font-size: 1.5em;
+	text-align: center;
+	position: relative;
+	border-radius: 5px;
+	padding: 5px;
+	box-shadow: 1px 1px 1px black;
+}
+
+.login label {
+	display: block;
+}
+
+.login input[type="text"],.login input[type="password"] {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
+
+.active {
+	background-color: #ddd;
+}
+
+.fixed {
+	position: fixed;
+	top: 10px;
+	left: 48%;
+	width: 35% !important;
+}
+
+.static {
+	position: static;
+}
+
+#footer {
+	display: block;
+	clear: both;
+	position: static;
+	bottom: 5px;
+}

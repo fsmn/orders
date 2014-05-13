@@ -1,6 +1,6 @@
 <?php
 
-class Order extends CI_Controller
+class Order extends MY_Controller
 
 {
 	function __construct()
@@ -43,7 +43,7 @@ class Order extends CI_Controller
 				$data["print"] = FALSE;
 				$data["title"] = "Add an Order";
 				$data["target"] = "order/edit";
-				$this->load->view("template", $data);
+				$this->load->view("page/index", $data);
 			}
 		}
 	}
@@ -82,7 +82,7 @@ class Order extends CI_Controller
 			$data["class"] = "list";
 			$data["target"] = $target;
 			$data["print"] = $print;
-			$this->load->view("template", $data);
+			$this->load->view("page/index", $data);
 
 		}
 
@@ -108,7 +108,7 @@ class Order extends CI_Controller
 		$data["print"] = false;
 		$orders = $this->order_model->fetch_vendor_orders( $kVendor );
 		$data["orders"] = $orders;
-		$this->load->view("template", $data);
+		$this->load->view("page/index", $data);
 
 	}
 
@@ -132,7 +132,7 @@ class Order extends CI_Controller
 			$data["title"] = "Purchase Order System: Edit Vendor";
 			$data["print"] = false;
 			$data["target"] = "order/edit";
-			$this->load->view("template", $data);
+			$this->load->view("page/index", $data);
 		}
 
 
@@ -219,7 +219,7 @@ class Order extends CI_Controller
 			$data["print"] = true;
 		}
 		$data["target"] = "order/totals";
-		$this->load->view("template", $data);
+		$this->load->view("page/index", $data);
 
 	}
 

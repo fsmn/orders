@@ -1,6 +1,6 @@
 <?php
 
-class Item extends CI_Controller
+class Item extends MY_Controller
 {
 
 	function __construct()
@@ -30,7 +30,7 @@ class Item extends CI_Controller
 				$data["print"] = false;
 				$data["title"] = "Add an Order";
 				$data["target"] = "item/edit";
-				$this->load->view("template", $data);
+				$this->load->view("page/index", $data);
 			}
 		}
 	}
@@ -54,7 +54,7 @@ class Item extends CI_Controller
 				$data["print"] = false;
 				$data["title"] = "Edit an Item";
 				$data["target"] = "item/edit";
-				$this->load->view("template", $data);
+				$this->load->view("page/index", $data);
 			}
 		}
 	}
@@ -111,7 +111,7 @@ class Item extends CI_Controller
 		$data["print"] = false;
 		$data["class"] = "list";
 		$data["kPO"] = "";
-		$this->load->view("template", $data);
+		$this->load->view("page/index", $data);
 		
 	}
 }

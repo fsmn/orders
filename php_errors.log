@@ -5,3 +5,6 @@
 [15-Nov-2011 10:44:25] PHP Fatal error:  Call to a member function get_all() on a non-object in /Users/administrator/Dropbox/orders/application/controllers/order.php on line 34
 [06-Feb-2014 11:31:49 America/Chicago] PHP Warning:  require_once(/Users/administrator/Dropbox/ci_core/system/core/CodeIgniter.php): failed to open stream: No such file or directory in /Users/administrator/Dropbox/orders/index.php on line 202
 [06-Feb-2014 11:31:49 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/Users/administrator/Dropbox/ci_core/system/core/CodeIgniter.php' (include_path='.:/usr/local/PEAR') in /Users/administrator/Dropbox/orders/index.php on line 202
+[13-May-2014 16:29:45 America/Chicago] PHP Fatal error:  Call to a member function logged_in() on a non-object in /Users/administrator/Dropbox/orders/application/views/page/index.php on line 8
+[13-May-2014 16:30:36 America/Chicago] PHP Fatal error:  Call to a member function logged_in() on a non-object in /Users/administrator/Dropbox/orders/application/core/MY_Controller.php on line 7
+[13-May-2014 16:33:25 America/Chicago] PHP Fatal error:  Call to undefined function create_button() in /Users/administrator/Dropbox/orders/application/views/page/menu.php on line 17
