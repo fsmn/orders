@@ -1,5 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
 body {
-	font-family: Tahoma, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
 	padding-left: 1em;
 	padding-top: 1em;
@@ -11,8 +13,11 @@ body {
 	margin-right: auto;
 	width: 9in;
 }
-
-h1,h2,h3,h4,h5 {
+h1 {
+	margin:0;
+	padding: 0;
+}
+h2,h3,h4,h5 {
 	padding: 5px;
 }
 
@@ -182,11 +187,8 @@ td.vendors {
 	top: 0;
 	width: 95%;
 	padding: .5em 1em 0 1em;
-	height: 2em;
-	*border-width: 1px;
-	*border-style: solid;
 	margin-bottom: 2em;
-	height: 35px;
+	height: 75px;
 	display: block;
 }
 
@@ -347,7 +349,6 @@ td.poLine {
 #item-table {
 	padding-top: 10px;
 }
-
 
 .button-box {
 	margin: 1em 0;
