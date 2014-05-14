@@ -31,5 +31,5 @@
 <p><label for="vendorCustomerID">Customer ID</label> <input type="text"
 	name="vendorCustomerID" id="vendorCustomerID" style="width: auto"
 	value="<?php echo getValue($vendor, 'vendorCustomerID'); ?>"/></p>
-<p><input type="submit" class="save_vendor" value="Save"/></p>
+<p><input type="submit" class="button save_vendor <?=$action;?>" value="<?=ucfirst($action);?>"/></p>
 </form>

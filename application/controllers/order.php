@@ -10,7 +10,6 @@ class Order extends MY_Controller
 		$this->load->model("item_model");
 		$this->load->model("vendor_model");
 		$this->load->model("variable_model");
-		$this->load->helper("general");
 	}
 
 	function index()

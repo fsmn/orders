@@ -17,7 +17,6 @@ class Vendor_model extends CI_Model
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->helper('general');
 	}
 
 	function prepare_variables()

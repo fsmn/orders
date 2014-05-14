@@ -31,5 +31,5 @@ $itemTotal = getAsCash(strval($itemCount) * strval($itemPrice));
 	name="itemTotal" readonly id="itemTotal" style="width: 5em"
 	value="<?=$itemTotal?>"></p>
 </form>
-<p><input type="submit" class="save_item" value="Save" /></p>
+<p><input type="submit" class="button save_item <?=$action;?>" value="<?=ucfirst($action);?>" /></p>
 

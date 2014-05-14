@@ -114,3 +114,7 @@ function getValue($object, $item, $default = false){
     }
     return $output;
 }
+
+function getUserName($user){
+	return sprintf("%s %s", $user->first_name, $user->last_name);
+}

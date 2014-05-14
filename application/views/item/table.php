@@ -44,7 +44,7 @@ if($target == "item/table"):?>
 			<td><a href="<?=site_url("order/view/$item->kPO");?>" title="show order"
 				>View Order #<?=$item->kPO?></a></td>
 				<? else: ?>
-			<td class="clear"><span class="edit_item button"
+			<td class="clear"><span class="edit_item edit button"
 				id="editItem_<?=$item->kItem; ?>">Edit</span></td>
 			<td class="clear"><span class="button delete_item delete"
 				id="item_<?=$item->kItem. "_" . $item->kPO; ?>">Delete</span></td>

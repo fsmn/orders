@@ -1,6 +1,5 @@
 <?php
 $listing = array();
-$this->load->helper('general');
 $lastVendor = 0;
 if (count($orders)> 0 ){
 	foreach($orders as $order){

@@ -31,7 +31,7 @@
 	?></span></p>
 <p><label for="poOrderedBy">Ordered By: </label><input type="text"
 	name="poOrderedBy" id="poOrderedBy" style="width: auto;"
-	value="<?=getValue($order, 'poOrderedBy'); ?>"/></p>
+	value="<?=getValue($order, 'poOrderedBy',getUserName($this->ion_auth->user()->row())); ?>"/></p>
 
 <p><label for="poBillingContact">Billing Contact: </label><input
 	type="text" name="poBillingContact" id="poBillingContact"
@@ -44,6 +44,6 @@
 <p><label for="poQuote">Vendor Quote Number: </label> <input type="text"
 	name="poQuote" id="poQuote" style="width: auto;"
 	value="<?=getValue($order, 'poQuote')?>"/></p>
-<p><input type="submit" class="save_order" value="Save" />
+<p><input type="submit" class="button save_order <?=$action;?>" value="<?=ucfirst($action);?>" />
 
 </form>
