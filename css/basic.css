@@ -258,7 +258,7 @@ input,textarea,select { /*margin-left: 140px;*/
 
 fieldset.vendor-list {
 	margin-top: 1em;
-	width: 25%;
+	width: 29%;
 	min-width: 200px;
 	border-width: 1px;
 }
@@ -411,11 +411,7 @@ td.poLine {
 	position: static;
 }
 
-fieldset.vendor-list {
-	width: 33%;
-	float: left;
-	display: block;
-}
+
 
 #footer {
 	display: block;
