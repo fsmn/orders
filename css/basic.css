@@ -261,6 +261,8 @@ fieldset.vendor-list {
 	width: 29%;
 	min-width: 200px;
 	border-width: 1px;
+	float: left;
+	display: block;
 }
 
 fieldset.vendor-list legend,span.vendor_view {
