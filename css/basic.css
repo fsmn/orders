@@ -411,6 +411,12 @@ td.poLine {
 	position: static;
 }
 
+fieldset.vendor-list {
+	width: 33%;
+	float: left;
+	display: block;
+}
+
 #footer {
 	display: block;
 	clear: both;
