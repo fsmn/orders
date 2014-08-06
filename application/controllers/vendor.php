@@ -17,7 +17,7 @@ class Vendor extends MY_Controller
 		$this->load->library("pagination");
 
 		$config["base_url"] = base_url(). "index.php/vendor/index/";
-		$config["per_page"] = 10;
+		$config["per_page"] = 20;
 		$config["num_links"] = 20;
 		$config["full_tag_open"] = "<div class='pagination'>";
 		$config["full_tag_close"] = "</div>";
