@@ -1,5 +1,5 @@
 <div class="login">
-<h2>Asset Management System</h2>
+<h2>Purchase Orders System</h2>
 <p><?php echo lang('login_subheading');?></p>
 
 <div id="infoMessage"><?php echo $message;?></div>
