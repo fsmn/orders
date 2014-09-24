@@ -10,6 +10,7 @@ body {
 
 #page {
 	padding: .5in;
+	width: 9in;
 }
 
 div.line {
@@ -45,6 +46,7 @@ div.line {
 
 #content {
 	min-width: 7.5in;
+	width: 8in;
 }
 
 .leftBox,.rightBox {

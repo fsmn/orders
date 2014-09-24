@@ -11,7 +11,7 @@ body {
 #page {
 	margin-left: auto;
 	margin-right: auto;
-	width: 9in;
+	max-width: 9in;
 }
 
 h1 {
@@ -57,6 +57,7 @@ input[type=submit],.button {
 	border-width: 1px;
 	cursor: pointer;
 	padding: 5px;
+	white-space: nowrap;
 }
 
 table td .button {
@@ -209,6 +210,22 @@ td.vendors {
 	color: black;
 }
 
+@media all and (max-width:400px) {
+	#navigation {
+		padding: 0;
+		height: 110px;
+	}
+	#navigation li {
+		margin: 0;
+		padding: 0;
+	}
+	#navigation li .button {
+		padding: 5px 1px;
+		font-size: .9em;
+	}
+}
+
+}
 #navigation ul li.site-name {
 	font-weight: bold;
 	font-size: 1.2em;
@@ -223,11 +240,10 @@ td.vendors {
 #user-menu {
 	position: fixed;
 	right: 25px;
-	top: 25px;
+	top: 0;
 }
 
 #content {
-	min-width: 7.5in;
 	max-width: 8in;
 	margin-left: auto;
 	margin-right: auto;
@@ -260,7 +276,7 @@ input,textarea,select { /*margin-left: 140px;*/
 
 fieldset.vendor-list {
 	margin-top: 1em;
-	width: 29%;
+	width: 20%;
 	min-width: 200px;
 	border-width: 1px;
 	float: left;
