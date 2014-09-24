@@ -13,10 +13,12 @@ body {
 	margin-right: auto;
 	width: 9in;
 }
+
 h1 {
-	margin:0;
+	margin: 0;
 	padding: 0;
 }
+
 h2,h3,h4,h5 {
 	padding: 5px;
 }
@@ -413,7 +415,11 @@ td.poLine {
 	position: static;
 }
 
-
+.notice {
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #000;
+}
 
 #footer {
 	display: block;

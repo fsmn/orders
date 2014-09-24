@@ -10,3 +10,7 @@ email.php
 */.DS_Store
 .DS_Store
 user_guide
+
+*.log
+
+*.log
