@@ -38,47 +38,47 @@ class Order_model extends CI_Model
             $this->kPO = $this->input->post('kPO');
         }
         ;
-        
+
         if ($this->input->post('poDate')) {
             $this->poDate = formatDate($this->input->post('poDate'), "mysql");
         }
-        
+
         if ($this->input->post('poOrderMethod')) {
             $this->poOrderMethod = $this->input->post('poOrderMethod');
         }
-        
+
         if ($this->input->post('poPaymentType')) {
             $this->poPaymentType = $this->input->post('poPaymentType');
         }
-        
+
         if ($this->input->post('poOrderedBy')) {
             $this->poOrderedBy = $this->input->post('poOrderedBy');
         }
-        
+
         if ($this->input->post('poBillingContact')) {
             $this->poBillingContact = $this->input->post('poBillingContact');
         }
-        
+
         if ($this->input->post('poCategory')) {
             $this->poCategory = $this->input->post('poCategory');
         }
-        
+
         if ($this->input->post('poConfirmation')) {
             $this->poConfirmation = $this->input->post('poConfirmation');
         }
-        
+
         if ($this->input->post('poShipping')) {
             $this->poShipping = $this->input->post('poShipping');
         }
-        
+
         if ($this->input->post('poReceived')) {
             $this->poReceived = $this->input->post('poReceived');
         }
-        
+
         if ($this->input->post('poQuote')) {
             $this->poQuote = $this->input->post('poQuote');
         }
-        
+
         if ($this->input->post('kVendor')) {
             $this->kVendor = $this->input->post('kVendor');
         }
@@ -106,7 +106,7 @@ class Order_model extends CI_Model
         $id_array = array(
                 'kPO' => $kPO
         );
-        
+
         echo $this->db->delete('order', $id_array);
     }
 
@@ -146,14 +146,13 @@ class Order_model extends CI_Model
         $this->db->select(
                 "vendor.kVendor as kVendor, vendor.vendorName as vendorName, order.poDate as poDate, order.kPO as kPO");
         $this->db->join('vendor', 'vendor.kVendor = order.kVendor');
-        $this->db->join('item', 'order.kPO=item.kPO');
         $this->db->from('order');
         $this->db->order_by('vendorName', 'asc');
         $this->db->order_by('poDate', 'desc');
         if ($kVendor) {
             $this->db->where("vendor.kVendor = $kVendor");
         }
-        
+
         $output = $this->db->get()->result();
         // $this->session->set_flashdata("notice",$this->db->last_query());
         return $output;
@@ -163,7 +162,7 @@ class Order_model extends CI_Model
     {
         $this->db->from('order');
         $this->db->distinct();
-        
+
         if (is_array($fields)) {
             foreach ($fields as $field) {
                 $this->db->select($field);
@@ -171,7 +170,7 @@ class Order_model extends CI_Model
         } else {
             $this->db->select($fields);
         }
-        
+
         if ($orderFields) {
             if (is_array($orderFields)) {
                 foreach ($orderFields as $order) {
@@ -181,7 +180,7 @@ class Order_model extends CI_Model
                 $this->db->order_by($orderFields);
             }
         }
-        
+
         $query = $this->db->get();
         $result = $query->result();
         return $result;
@@ -204,7 +203,7 @@ class Order_model extends CI_Model
         $start = formatDate($startDate, 'mysql');
         $end = formatDate($endDate, 'mysql');
         $this->db->order_by('poDate', 'DESC');
-        
+
         $this->db->order_by('order.kPO');
         $this->db->from('order');
         $this->db->from('item');
