@@ -66,8 +66,6 @@ class Item extends MY_Controller
 			$this->item_model->update_item($kItem);
 			$kPO = $this->input->post("kPO");
 			$total = $this->item_model->fetch_item_totals($kPO);
-
-			$this->order_model->update_total($kPO, $total->total);
 		}
 
 		redirect("order/view/" . $this->input->post("kPO") );
@@ -77,7 +75,7 @@ class Item extends MY_Controller
 	{
 		if ($this->input->post("kPO") ) {
 			$this->item_model->insert_item();
-			$kPO = $this->input->post("kPO");	
+			$kPO = $this->input->post("kPO");
 
 			redirect("order/view/" . $kPO );
 		}
@@ -95,12 +93,12 @@ class Item extends MY_Controller
 
 
 	}
-	
+
 	function search()
 	{
 		$this->load->view("item/search");
 	}
-	
+
 	function find()
 	{
 		$search_string = $this->input->post("search_string");
@@ -112,6 +110,6 @@ class Item extends MY_Controller
 		$data["class"] = "list";
 		$data["kPO"] = "";
 		$this->load->view("page/index", $data);
-		
+
 	}
 }

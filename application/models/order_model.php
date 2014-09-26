@@ -213,11 +213,4 @@ class Order_model extends CI_Model
         return $query->result();
     }
 
-    function update_total ($kPO)
-    {
-       /*  $this->load->model("item_model");
-        $total = $this->item_model->fetch_item_totals($kPO);
-        $this->db->where('kPO', $kPO);
-        $this->db->update('order', $update); */
-    }
 }

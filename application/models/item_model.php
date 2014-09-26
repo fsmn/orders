@@ -33,31 +33,31 @@ class Item_model extends CI_Model
             $this->kPO = $this->input->post('kPO');
         }
         ;
-        
+
         if ($this->input->post('itemCount')) {
             $this->itemCount = $this->input->post('itemCount');
         }
-        
+
         if ($this->input->post('itemNumber')) {
             $this->itemNumber = $this->input->post('itemNumber');
         }
-        
+
         if ($this->input->post('itemDescription')) {
             $this->itemDescription = $this->input->post('itemDescription');
         }
-        
+
         if ($this->input->post('itemPrice')) {
             $this->itemPrice = $this->input->post('itemPrice');
         }
-        
+
         if ($this->input->post('itemCategory')) {
             $this->itemCategory = $this->input->post('itemCategory');
         }
-        
+
         if ($this->input->post('itemTotal')) {
             $this->itemTotal = $this->itemCount * $this->itemPrice;
         }
-        
+
         if ($this->input->post('kOrder')) {
             $this->kOrder = $this->input->post('kOrder');
         }
@@ -67,8 +67,6 @@ class Item_model extends CI_Model
     {
         $this->prepare_variables();
         $this->db->insert('item', $this);
-        $this->load->model("order_model");
-        $this->order_model->update_total($this->kPO);
         return $this->db->insert_id();
     }
 
@@ -77,8 +75,6 @@ class Item_model extends CI_Model
         $this->prepare_variables();
         $this->db->where('kItem', $kItem);
         $this->db->update('item', $this);
-        $this->load->model("order_model");
-        $this->order_model->update_total($this->kPO);
     }
 
     function update_po ($kPO, $newPO)
@@ -98,8 +94,6 @@ class Item_model extends CI_Model
                 'kItem' => $kItem
         );
         $this->db->delete('item', $id_array);
-        $this->load->model("order_model");
-        $this->order_model->update_total($this->kPO);
     }
 
     function delete_item_by_order ($kPO)
