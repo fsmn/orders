@@ -2,7 +2,7 @@
 
 body {
 	font-family: 'Open Sans', Tahoma, sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 	padding-left: 1em;
 	padding-top: 1em;
 	padding-right: 1em;
@@ -90,7 +90,7 @@ table.order {
 
 table.order_list td,tbody td {
 	padding: 0.05in;
-	font-size: 12px
+	font-size: 1em;
 }
 
 td {
