@@ -5,9 +5,9 @@
 <meta http-equiv="cache-control" content="no-store" />
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="expires" content="-1" />
-<meta name="viewport"
-	content="initial-scale=1; maximum-scale=2; minimum-scale=1; user-scalable=1;" />
-
+  <meta name="viewport"
+  content="width=device-width,
+  minimum-scale=1.0, maximum-scale=1.0" />
 <link href="<?=base_url("css/basic.css");?>" type="text/css"
 	rel="stylesheet" media="all" />
 <link href="<?=base_url("css/color.css"); ?>" type="text/css"
