@@ -6,12 +6,12 @@ if($target == "item/table"):?>
 <table class="order" >
 	<thead>
 		<tr>
-			<td style="width: .25in">CT</td>
-			<td style="width: .75in">Item#</td>
-			<td style="width: 3in">Description</td>
-			<td style="width: 1in">Category</td>
-			<td style="width: .75in">Price</td>
-			<td style="width: .75in">Total</td>
+			<td class='count'>CT</td>
+			<td class='item-number'>Item#</td>
+			<td class='description'>Description</td>
+			<td class='category'>Category</td>
+			<td class='price currency'>Price</td>
+			<td class='total currency'>Total</td>
 			<?php if($print != true): ?>
 
 			<td class="clear"></td>
@@ -26,9 +26,9 @@ if($target == "item/table"):?>
 	$grandTotal = 0;
 	if(!empty($items)):
 		foreach($items as $item):
-	
+
 			$total=strval($item->itemCount)*strval($item->itemPrice);  ?>
-	
+
 		<tr class="<?=$class?>" id="itemRow_<?=$item->kItem?>">
 			<td><?=$item->itemCount?></td>
 			<td><?=$item->itemNumber?></td>
@@ -36,7 +36,7 @@ if($target == "item/table"):?>
 			<td><?=$item->itemCategory?></td>
 			<td style="text-align: right"><?=getAsCash($item->itemPrice)?></td>
 			<td style="text-align: right"><?=getAsCash(strval($item->itemCount)*strval($item->itemPrice))?></td>
-	
+
 			<?  $grandTotal+=$total;
 			if( $print ):
 			echo "</tr>";
@@ -49,13 +49,13 @@ if($target == "item/table"):?>
 			<td class="clear"><span class="button delete_item delete"
 				id="item_<?=$item->kItem. "_" . $item->kPO; ?>">Delete</span></td>
 		</tr>
-	
+
 		<? endif;
-		endforeach; 
+		endforeach;
 		 endif; ?>
 		 <tr>
         <td style="text-align: right" colspan="6">Total: <span
             id="total_<?=$kPO?>"><?=getAsCash($grandTotal)?></span></td>
     </tr>
-	
+
 </table>

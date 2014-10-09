@@ -93,6 +93,26 @@ table.order_list td,tbody td {
 	font-size: 1em;
 }
 
+table.order .count {
+	width: .25in;
+}
+
+table.order .item-number {
+	width: .75in;
+}
+
+table.order .description {
+	width: 3in;
+}
+
+table.order .category {
+	width: 1in;
+}
+
+table.order .currency {
+	width: .75in;
+}
+
 td {
 	vertical-align: middle;
 	border-style: solid;
@@ -442,4 +462,35 @@ td.poLine {
 	clear: both;
 	position: static;
 	bottom: 5px;
+}
+
+@media screen and (max-width: 500px) {
+	.leftBox {
+		width: 90%;
+	}
+	.rightBox {
+		width: 90%;
+		margin-left: 0;
+		float: left;
+		padding-left: 0;
+	}
+	/*table.order td {
+		clear:both;
+		display: block;
+	}
+	table.order .count {
+		width: auto;
+	}
+	table.order .item-number {
+		width: auto;
+	}
+	table.order .description {
+		width: auto;
+	}
+	table.order .category {
+		width: auto;
+	}
+	table.order .currency {
+		width: .auto;
+	}*/
 }
