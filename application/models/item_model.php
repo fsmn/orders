@@ -4,19 +4,12 @@ class Item_model extends CI_Model
 {
 
     var $kPO;
-
     var $itemCount;
-
     var $itemNumber;
-
     var $itemDescription;
-
     var $itemPrice;
-
     var $itemCategory;
-
     var $kOrder;
-
     var $itemTotal;
 
     function __construct ()
@@ -126,6 +119,7 @@ class Item_model extends CI_Model
         $this->db->like("itemDescription", $data);
         $this->db->or_like("itemNumber", $data);
         $this->db->from("item");
+        $this->db->join("order", "item.kPO=order.kPO");
         $result = $this->db->get()->result();
         return $result;
     }

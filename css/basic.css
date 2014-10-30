@@ -112,6 +112,13 @@ table.order .category {
 table.order .currency {
 	width: .75in;
 }
+table.order .po-date {
+	width: 1in;
+}
+
+table.order .kPO{
+	width: .75in;
+}
 
 td {
 	vertical-align: middle;
@@ -119,6 +126,10 @@ td {
 	border-width: 1px;
 	margin: 0px;
 	padding: 0px;
+}
+
+table.order td {
+	vertical-align: top;
 }
 
 thead td {

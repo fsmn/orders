@@ -12,12 +12,12 @@ if($target == "item/table"):?>
 			<td class='category'>Category</td>
 			<td class='price currency'>Price</td>
 			<td class='total currency'>Total</td>
+			<td class='po-date'>Date</td>
 			<?php if($print != true): ?>
 
-			<td class="clear"></td>
-			<td class="clear"></td>
+			<td class="kPO">Order</td>
 			<?php elseif($target == "item/table"):?>
-			<td></td>
+			<td class='kPO'></td>
 			<?php endif; ?>
 
 		</tr>
@@ -36,13 +36,14 @@ if($target == "item/table"):?>
 			<td><?=$item->itemCategory?></td>
 			<td style="text-align: right"><?=getAsCash($item->itemPrice)?></td>
 			<td style="text-align: right"><?=getAsCash(strval($item->itemCount)*strval($item->itemPrice))?></td>
-
+<td><?=formatDate($item->poDate);?></td>
 			<?  $grandTotal+=$total;
 			if( $print ):
 			echo "</tr>";
 			elseif($target == "item/table"): ?>
 			<td><a href="<?=site_url("order/view/$item->kPO");?>" title="show order"
-				>View Order #<?=$item->kPO?></a></td>
+				><?=$item->kPO?></a></td>
+
 				<? else: ?>
 			<td class="clear"><span class="edit_item edit button"
 				id="editItem_<?=$item->kItem; ?>">Edit</span></td>
