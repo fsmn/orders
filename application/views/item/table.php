@@ -12,13 +12,15 @@ if($target == "item/table"):?>
 			<td class='category'>Category</td>
 			<td class='price currency'>Price</td>
 			<td class='total currency'>Total</td>
-			<td class='po-date'>Date</td>
-			<?php if($print != true): ?>
+			<?php if($target == "item/table"):?>
+    			<td class='po-date'>Date</td>
+    			<?php if($print != true): ?>
+    			    <td class="kPO">Order</td>
+    			<?php endif; ?>
+    			<?php else:?>
+    			<td class="clear"></td>
+			<?php endif;?>
 
-			<td class="kPO">Order</td>
-			<?php elseif($target == "item/table"):?>
-			<td class='kPO'></td>
-			<?php endif; ?>
 
 		</tr>
 	</thead>
@@ -36,7 +38,9 @@ if($target == "item/table"):?>
 			<td><?=$item->itemCategory?></td>
 			<td style="text-align: right"><?=getAsCash($item->itemPrice)?></td>
 			<td style="text-align: right"><?=getAsCash(strval($item->itemCount)*strval($item->itemPrice))?></td>
+			<?php if($target == "item/table"):?>
 <td><?=formatDate($item->poDate);?></td>
+<?php endif;?>
 			<?  $grandTotal+=$total;
 			if( $print ):
 			echo "</tr>";
@@ -45,10 +49,13 @@ if($target == "item/table"):?>
 				><?=$item->kPO?></a></td>
 
 				<? else: ?>
-			<td class="clear"><span class="edit_item edit button"
-				id="editItem_<?=$item->kItem; ?>">Edit</span></td>
-			<td class="clear"><span class="button delete_item delete"
-				id="item_<?=$item->kItem. "_" . $item->kPO; ?>">Delete</span></td>
+			<td class="clear"><ul class='button-box'><li><span class="edit_item edit"
+				id="editItem_<?=$item->kItem; ?> title="edit item">Edit</span></li>
+				<li>
+				<span class="delete_item delete"
+				id="item_<?=$item->kItem. "_" . $item->kPO; ?> title="delete item">Delete</span>
+				</li>
+				</ul></td>
 		</tr>
 
 		<? endif;
