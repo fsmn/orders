@@ -17,8 +17,6 @@ class Order_model extends CI_Model
 
     var $poCategory;
 
-    var $poConfirmation;
-
     var $poShipping;
 
     var $poReceived;
@@ -61,10 +59,6 @@ class Order_model extends CI_Model
 
         if ($this->input->post('poCategory')) {
             $this->poCategory = $this->input->post('poCategory');
-        }
-
-        if ($this->input->post('poConfirmation')) {
-            $this->poConfirmation = $this->input->post('poConfirmation');
         }
 
         if ($this->input->post('poShipping')) {
