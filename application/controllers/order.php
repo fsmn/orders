@@ -37,7 +37,7 @@ class Order extends MY_Controller
                     "other" => TRUE,
                     "initial_blank" => TRUE
             );
-            $data["categoryPairs"] = getKeyedPair($categories, 
+            $data["categoryPairs"] = getKeyedPair($categories,
                     array(
                             "var_name",
                             "var_value"
@@ -58,7 +58,7 @@ class Order extends MY_Controller
     function insert ()
     {
         if ($this->input->post("kVendor")) {
-            
+
             $this->order_model->insert_order();
             $this->view($this->input->post("kPO"));
         }
@@ -87,6 +87,9 @@ class Order extends MY_Controller
             $data["items"] = $items;
             $data["class"] = "list";
             $data["target"] = $target;
+            if($print){
+                $data["title"] = "PO-$kPO $vendor->vendorName";
+            }
             $data["print"] = $print;
             $this->load->view("page/index", $data);
         }
@@ -99,16 +102,16 @@ class Order extends MY_Controller
         $data["kVendor"] = false;
         $data["title"] = "List of Orders"; // seems unwise to allow display of
                                            // all orders
-        
+
         if ($this->uri->segment(3)) {
             $kVendor = $this->uri->segment(3);
-            $vendorName = $this->vendor_model->get_vendor_value($kVendor, 
+            $vendorName = $this->vendor_model->get_vendor_value($kVendor,
                     "vendorName");
             $data["vendorName"] = $vendorName;
             $data["kVendor"] = $kVendor;
             $data["title"] = "List of Orders for $vendorName";
         }
-        
+
         $data["target"] = "order/list";
         $data["print"] = false;
         $orders = $this->order_model->fetch_vendor_orders($kVendor);
@@ -135,7 +138,7 @@ class Order extends MY_Controller
                 "other" => TRUE,
                 "initial_blank" => TRUE
         );
-        $data["categoryPairs"] = getKeyedPair($categories, 
+        $data["categoryPairs"] = getKeyedPair($categories,
                 array(
                         "var_name",
                         "var_value"
@@ -211,7 +214,7 @@ class Order extends MY_Controller
     {
         $startDate = $this->input->post("startDate");
         $endDate = $this->input->post("endDate");
-        $data["orders"] = $this->order_model->fetch_by_date_range($startDate, 
+        $data["orders"] = $this->order_model->fetch_by_date_range($startDate,
                 $endDate);
         $data["startDate"] = $startDate;
         $data["endDate"] = $endDate;
