@@ -16,15 +16,7 @@
  */
 
 $config['base_url'] = '';
-/*
-if( $_SERVER['SERVER_NAME'] == "test.server.fsmn" ){
-	$config['base_url'] = 'http://test.server.fsmn/orders/';
-}elseif( $_SERVER['SERVER_NAME'] == "app.server.fsmn" ){
-	$config['base_url'] = 'http://app.server.fsmn/orders/';
-}else{
-	$config['base_url'] = 'http://cerebratorium.local/~chrisdart/Dropbox/order_system/';
-}
-*/
+
 /*
  |--------------------------------------------------------------------------
  | Index File
@@ -189,7 +181,7 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
  | your log files will fill up very fast.
  |
  */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 4;
 
 /*
  |--------------------------------------------------------------------------
